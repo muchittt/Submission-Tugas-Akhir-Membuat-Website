@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font: 'Quicksand',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: inline;
+}
+
+h2,
+h3 {
+    color: #024b18;
+}
+h3.infomore {
+    color: #024b18;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    color: black;
+    background-color: #FAF2D3;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile header{
+    text-align: center;
+}
+
+.featured-image {
+    width: 50%;
+    max-height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: auto;
+}
+
+.profile img {
+    width: 200px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 20px;
+    background-color: #FAF2D3;
+    text-align: center;
+    color: black;
+}
+
+nav {
+    background-color: #FFCC70;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+nav a:hover{
+    font-weight: bold;
+    background-color: #425c77;
+    color: white;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    gap: 1.5rem;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+aside {
+    flex: 1;
+}
+
+th {
+    text-align: left;
+}
+
+/* Social Meda */
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+   
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    /* background-color: #2D3E50; */
+   
+    display: flex;
+    flex-flow: column nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+   
+main aside .social-media li {
+    list-style-type: none;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    /* color: white; */
+    transition: all .1s ease-in-out;
+}
+   
+main aside .social-media li a:hover {
+    color: #89b0d9;
+}
+
+/* scroll-top */
+
+:root{
+    --red:#FFCC70;
+}
+
+*::selection{
+    background:var(--red);
+    color:#fff;
+}
+
+#scroll-top{
+    position: fixed;
+    top:-150%;
+    right:2rem;
+    padding:.3rem 0.7rem;
+    font-size: 3rem;
+    background:var(--red);
+    color:#fff;
+    border-radius: .5rem;
+    transition: 1s linear;
+    z-index: 1000;
+}
+  
+#scroll-top.active{
+    top:calc(100% - 7rem)
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+    main aside {
+        align-self: stretch;
+    }
+}
